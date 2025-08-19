@@ -15,7 +15,10 @@ export default function Movies(){
         return(
             <div key={movie.id} className="text-[#161616] max-w-[300px]">
                 <Link to={`/movies/${movie.id}`}>
-                <img src={movie.imageUrl} className="w-[350px] h-[400px] object-cover rounded mb-2"/>
+                <img src={movie.imageUrl} 
+                    alt={`Image of ${movie.name}`} 
+                    className="w-[350px] h-[400px] object-cover rounded mb-2"
+                />
                 <div>
                     <h3>{movie.name}</h3>
                     <p>${movie.price}<span>/movie</span></p>
