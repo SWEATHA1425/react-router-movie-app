@@ -17,7 +17,7 @@ export default function MovieDetail(){
                 movie ? (
                     <div>
                     <img 
-                    className="w-[350px] h-[450px] object-cover rounded mb-2"
+                    className="w-[200px] h-[300px] object-cover rounded mb-2"
                     src={movie.imageUrl} />
                     <i className={`
                         inline-block mt-1 px-4 py-1 rounded text-white
@@ -32,7 +32,7 @@ export default function MovieDetail(){
                     className="bg-blue-400 hover:bg-blue-500 shadow rounded px-2 py-2 text-white"
                     >Buy this movie</button>
                 </div>
-                ) : <h1>Loading...</h1>
+                ) : <h1 className="text-emerald-700 font-semibold">Loading...</h1>
             }
         </div>
     )
