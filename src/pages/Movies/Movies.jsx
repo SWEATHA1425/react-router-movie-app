@@ -10,14 +10,13 @@ export default function Movies(){
         .then(data => setMovies(data.movies))
     },[])
 
-
     const movieElements = movies.map(movie => {
         return(
             <div key={movie.id} className="text-[#161616] max-w-[300px]">
                 <Link to={`/movies/${movie.id}`}>
                 <img src={movie.imageUrl} 
                     alt={`Image of ${movie.name}`} 
-                    className="w-[350px] h-[400px] object-cover rounded mb-2"
+                    className="w-[250px] h-[350px] object-cover rounded mb-2"
                 />
                 <div>
                     <h3>{movie.name}</h3>
@@ -38,7 +37,6 @@ export default function Movies(){
             </div>
         )
     })
-
 
     return(
         <div className="px-6">
